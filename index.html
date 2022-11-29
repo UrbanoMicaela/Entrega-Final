@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>FLEXBOX</h1>
+    <h2>HEADER / NAV RESPONSIVE CON FLEX</h2>
+    <header class="nav-container">
+        <div class="nav">
+            <div class="inicio">Inicio</div>
+            <div class="noticias">Noticias</div>
+            <div class="contato">Contacto</div>
+        </div>
+    </header>
+
+
+
+    <!--  EN CSS
+    PRIMERO REINCIO LOS VALORES DE FABRICA
+        *margin: 0;
+        pading:0;
+        SEGUNDO: PONGO COLOR AL ESPACIO DEL NAV
+        .nav-container{
+            color: (color de la letra)
+            background-color; (color de fondo)
+            padding: 10px 0; (el primero es el relleno VERTICAL y el segundo es el relleno HORIZONTAL)
+        }
+        .nav{
+            border: 1px solid white; (PRIMERO EL TAMAÑO DEL BORDE. SEGUNDO EL ESTILO Y TERCERO EL COLOR)
+            width:70%; (utilizamos % para que se ajuste a nuestro )
+        }
+    -->
+    <!--                                            CONCEPTOS EN CSS
+                    SINTAXIS DE CLASES
+    camelCase
+    Kebah-case
+    snake_case-
+                    UNIDADES DE MEDIDAS
+    UNIDADES ABSOLUTAS: px cm
+    UNIDADES RELATIVAS: % rem em  (se acomodan al tamaño de pantalla)
+    -->
+    <h2>CONTENEDORES FLEXIBLES</h2>
+    <!-- SON DOS TIPOS DE CONTENEDORES QUE TRABAJA FLEXBOX- UNO PADRE Y EL OTRO ITEM
+    para activar o indicarle al navegador que es una etiqueta flex utilizo en css en ese contenedor
+    display: flex;
+    al utilizar la clase en la etiqueta padre, todos los hijos utilizaran valores de flexbox
+    ej: headre (padre) - div/nav (hijo)
+    -->
+    <!--
+                    ALINEACIONES
+        HORIZONTAL
+        en css CONTENEDOR PADRE:
+        display: flex;
+        justify-content: center;  (genera un margen automatico para centrar en el medio)
+        justify-content: start; (alinea todo a la izquierda)
+        justify-content: end; (alinea todo a la derecha)
+
+        VERTICAL
+        en css
+
+
+                            ALINEACION DE ITEMS
+        en css CONTENEDOR HIJO:
+        display: flex;
+        justify-content: space-around; (distribuye los elementos en espacios iguales )
+        justify-content: justify;
+        justify-content: space-between;
+                -->
+
+    <!-- SIRVE PARA EL FOOTER -->
+    <section class="suscrib-container">
+        <div class="suscrib">
+            <div class="420">READY FOR 4:20?</div>
+            <div class="mail">
+
+                <a href="mailto:420@thegrowclub.com"> 420@thegrowclub.com</a>
+            </div>
+            <div class="redes"> <a href="instagram.com"> INSTAGRAM</a></div>
+        </div>
+    </section>
+    <!-- ALINEACION VERTICAL EN ELEMENTOS EN LINEA
+            en CSS etiqueta PADRE
+        .suscrib-container{
+        color: red (color de fondo)
+        background-color: white; (color de letra)
+        display:flex; (lo hago flexible)
+        justify-content: center; (lo alineo al centro)
+                    EN LA CATEGORIA PADRE NO LO PONGO UNO AL LADO DEL OTRO,
+                    SOLAMENTE LO CENTRO Y LE AVISO AL NAVEGADOR QUE NO SON ELEMENTOS
+                    EN BLOQUEEEE ;)
+        .suscrib{
+        widht: 100%; (el ancho)
+        display:flex (lo hago flexible- se pone en linea)
+                ELIJO QUE ESPACIO TIENEN ENTRE LOS ITEMS
+        justify-content: space-around;
+        ALINEACION VERTICAR EN LA CLASE HIJOO
+        aling-items: center;
+        aling-items: end;
+        aling-items: start
+        aling-items:flex-end
+        }
+
+        -->
+    <h2>COMO ARREGLAR UN SCROLL QUE ROMPE EL ANCHO DE PAGINA</h2>
+    <section class="product-container">
+        <div class="product">
+            <div class="product-item">PRODUCTO 1 (EN IMG)</div>
+            <div class="product-item">PRODUCTO 2 (EN IMG)</div>
+            <div class="product-item">PRODUCTO 3 (EN IMG)</div>
+        </div>
+    </section>
+    <!-- en CSS
+            -->
+    CUANDO SE ROMPE LA PANTALLA EN TAMAÑO POR LOS ELEMENTOS,
+    <!-- 
+                ACOMODA LOS ELEMENTOS EN UNA FILA NUEVA ABAJO
+    .product-container{ (((CATEGORIA PADREEEE)))
+    display:flex; (lo hago flexible)
+    justify-content: center; (lo alineo al centro)
+            }
+    .product{
+    widht: 80%;
+            display: flex; (lo hago flexible)
+            justify-content: center; (lo alinea al centro)
+            flex-wrap: wrap; (cada vez que se va a romper la pag por el ancho, lo tira abajo)
+        }
+        -->
+    COMO CAMBIAR LA DIRECCION DE LAS COSAS
+    <!-- 
+        (convertir en fila o en columba los productos)
+        en css
+  -->
+    CUANDO SE ROMPE LA PANTALLA EN TAMAÑO POR LOS ELEMENTOS,
+    <!--
+        ACOMODA LOS ELEMENTOS EN UNA FILA NUEVA ABAJO
+            product-container{ (((CATEGORIA PADREEEE)))
+                display:flex; (lo hago flexible)
+                justify-content: center; (lo alineo al centro)
+            }
+        .product{ ((((CATEGORIA HIJOOO))))
+
+            widht: 80%;  (LE CAMBIO EL ANCHO QUE QUIERA)
+
+            display: flex; (LO HAGO FLEXIBLE)
+
+            justify-content: center; (LO ALINEO AL CENTRO)
+
+            flex-wrap: wrap; (CADA VEZ QUE SE VA A ROMPER LA PAGINA POR EL ANCHO, LO TIRA ABAJO)
+
+            DIRECCION DE LOS CONTENEDORES- ACOMODA EN FILA O EN COLUMNA {ELIJO UNA SOLAAA}
+            flex- direction: row; (ACOMODA EN LINEA 1-2-3-4-5)
+
+            flex- direction: row-reverse (ACOMODA EN LINEA PERO AL REVES 5-4-3-2-1)
+            flex- direction: column (ACOMODA EN COLUMNA)
+            flex- direction: column (ACOMODA EN COLUMNA PERO AL REVES)
+
+    -->
+    <h2></h2>
+    <section class="product-container">
+        <div class="product">
+            <div class="product-item">PRODUCTO 1 (EN IMG)</div>
+            <div class="product-item">PRODUCTO 2 (EN IMG)</div>
+            <div class="product-item_diferente">PRODUCTO 3 (EN IMG)</div>
+        </div>
+    </section>
+    POSICIONAR LOS ELEMENTOS EN DISTINTO ORDEN ESPECIFICO (LO LLEVA SOLAMENTE DE A UN ELEMENTO)
+
+    <!-- EN CSS
+        
+        .product-item{
+            order:1 (CON UN NUMERO POSITIVO, LO LLEVA LO MAS A LA DERECHA POSIBLE EN LA FILA
+                            EJ: 2-3-4-5-1)
+
+        } 
+    
+        .product-item_diferente{
+            order: -1 (CON UN NUMERO DIFERENTE, LO LLEVA LO MAS A LA IZQUIERDA POSIBLE DE LA FILA  
+                                EJ: 5-1-2-3-4)
+        }-->
+
+
+
+                                        CLASE 8
+
+    CONTENEDOR CUADRADO CON TRANSICION
+    <section>
+        <div>
+            <h2>con transicion</h2>
+            <div class="box box-1"></div>
+        </div>
+        CONTENEDOR CUADRADO SIN TRANSICION
+
+        <div>
+            <h2>SIN transicion</h2>
+            <div class="box box-2"></div>
+        </div>
+    </section>
+
+    <!-- TRUCO PARA PROGRAMAR CON ATAJOSSSSS
+    
+            ESCRIBO: 
+                    div*4.class$
+            RESULTADO:
+                    <div class="class"></div>
+                    <div class="class"></div>
+                    <div class="class"></div>
+                    <div class="class"></div>
+-->
+    CONTENDOR CIRCULAR
+
+    <section class="circle-container">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </section>
+
+
+    SQUARE
+    <div class="square-uno"></div>
+    <div class="square-dos"></div>
+
+    COMBINADO
+    <div class="combinado"></div>
+
+
+    ANIMACIONES 
+    <div class="animacion"></div>
+
+    <section></section>
+</body>
+
+</html>

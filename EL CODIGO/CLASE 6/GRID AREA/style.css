@@ -1,0 +1,40 @@
+/* Para activar grid, se aplica display grid en el contenedor padre */
+.grid-container {
+    /* Habilita los poderes de grid */
+    display: grid;
+    /* Definimos filas */
+    grid-template-rows: repeat(4, 200px);
+    /* Definimos columnas */
+    /* Fracciones */
+    grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr */
+    border: 3px solid black;
+    /* Espacio entre celdas */
+    gap: 10px;
+    /* Areas */
+    grid-template-areas: 
+    'header header header'
+    'products products banner'
+    'products products banner'
+    'footer footer footer';
+}
+
+.header {
+    grid-area: header;
+    border: 3px solid black;
+}
+
+.items {
+    grid-area: products;
+    border: 3px solid black;
+}
+
+.publicidad {
+    grid-area: banner;
+    border: 3px solid black;
+}
+
+.pie {
+    grid-area: footer;
+    border: 3px solid black;
+}
+

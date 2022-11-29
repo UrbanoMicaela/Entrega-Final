@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding:0;
+}
+ 
+/** SEGUNDO: PONGO COLOR AL ESPACIO DEL NAV 
+.nav-container{
+    color: black ;
+    background-color: yellowgreen;
+    padding: 10px 0; 
+}
+.nav{
+    border: 1px solid white; 
+    width: 70%;
+    
+}
+
+CLASE 8
+
+CUADRADROSS SIN TRANCISION 
+.box {
+    height: 40px;
+    width: 80px;
+    border-radius: 6px; PARA REDONDEAR LAS PUNTAS
+    margin: 50px auto; PARA CENTRAR LOS ELEMENTOS
+}
+
+
+.box-1{
+    background-color: mediumaquamarine;
+    
+}
+
+
+.box-2{
+    background-color: mediumorchid;
+    
+}
+.box:hover{
+    transform: scale(4); LAS PROPIEDADES DE CSS SE LAS APLICO A LA CLASE DE CADA CONTENEDOR ej:color y tamaño
+}
+    -le pido que cuando pase el mouse se multiplique por cuatro el tamaño del contenedor
+
+
+        :hover ----> cambia el estado del elemento html al pasar el mouse por encima, le agrega las propiedades que este incluya
+
+CUADRADROSS SIN TRANCISION 
+**/
+
+.box{
+    height: 40px;
+    width: 80px;
+    border-radius: 6px;
+    margin: 50px auto;
+}
+.box-1{
+background-color: mediumpurple;
+}
+.box:hover{
+transform: scale(4);
+}
+
+
+/**CUADRADROSS SIN TRANCISION **/
+.box{
+    height: 40px;
+    width: 80px;
+    border-radius: 6px;
+    margin: 50px auto;
+}
+.box-2{
+    background-color: mediumspringgreen;
+    transition: all 2s;
+}
+/**SE AGREGAN DOS VALORES A LAS PROPIEDADES: ALL asi es para todos los elementos
+y  TIEMPO total de la transicion**/
+.box:hover{
+    transform: scale(4);
+}
+/**LO ESCALO POR 4 PARA QUE SE AGRANDE PROGRESIVAMENTE DURANTE 2 SEGUNDOS**/
+
+/**1                CISCULOSSS 
+PUEDO ESCRIBIRLO DE DOS FORMAS SI TENGO MUCHOS ELEMENTOS CON MISMA PROPIEDADES
+
+OPCION 1
+.cicle1, circle2, circle3, circle4 {
+    background-color: mediumvioletred;
+}
+
+OPCION 2 **/
+.container-circle div{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.circle1{
+background-color: mediumslateblue;    
+}
+
+.circle2{
+    background-color: mediumturquoise;    
+    }
+    
+.circle3{
+    background-color: mediumvioletred;    
+    }
+    
+.circle4{
+    background-color: mediumseagreen;    
+    }
+
+    /* EN EL PASO 3 LE INDICO LA TRANSICION QUE QUIERO QUE REALIZAR 
+    LAS VOY A TRANSLADAR POR EL EJE X HASTA UNA UBICACION CON EL MISMO TIEMPO FINAL*/
+
+.container-circle:hover .circle1,
+.container-circle:hover .circle2,
+.container-circle:hover .circle3,
+.container-circle:hover .circle4{
+transform: translateX(200px);
+transition: all 2s;
+}
+
+/* OTRA TRANSICION QUE QUIERO QUE REALIZAR 
+    LAS VOY A TRANSLADAR POR EL EJE X HASTA UNA UBICACION CON EL MISMO TIEMPO FINAL PERO DISTINTAS TRANCISIONES CON LA CURVA DE VELOCIDAD
+    
+    CURVA DE VELOCIDAD: Es la que te permite elegir, mas a alla de que todos lleguen a la meta, podes decidir como queres
+    que llegue ( si arranca mas rapido, si va mas lento al principio y desp mas rapido
+    ease
+    ease-in: 
+    ease-in-out
+    ease-out*/
+    .container-circle div{
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+    }
+    
+    .circle1{
+    background-color: mediumslateblue;    
+    transition: all 1.5s ease;
+    }
+    
+    .circle2{
+        background-color: mediumturquoise;    
+        transition: all 1.5s ease-in;    
+    }
+
+        
+    .circle3{
+        background-color: mediumvioletred;
+        transition: all 1.5s ease-in-out;    
+        }
+        
+    .circle4{
+        background-color: mediumseagreen;    
+        transition: all 1.5s ease-out;
+        }
+
+
+        /* SQUARE- O  MIX */
+
+        .square-uno, .square-dos{
+            border-radius: 6px;
+            height: 150px;
+            width: 150px;
+            margin: 100px;
+            position: absolute;
+        }
+
+        .square-uno{
+            background-color: teal;
+
+        }
+        .square-dos{
+            background-color: steelblue;
+
+        }
+
+        .square-dos:hover {
+            transform: translate(20px, 20px);
+            transition: all 0.8s;
+            background-color: transparent;
+        }
+
+        .combinado{
+            background-color: violet;
+            height: 75px;
+            width: 75px;
+            margin: 50px auto;
+        }
+
+        .combinado:hover{
+            transform: rotate(90deg) scale(2);
+            transition: all 2s;
+        }
+        
+        /* ANIMACIONES */
+
+        .animacion{
+            width: 120px;
+            height: 120px;
+            margin: 50px auto;
+            background-color: burlywood;
+        
+        }
+
+        .animacion:hover{
+            /* ANIMACION CON UN NOMBRE Y UNA DURACION  */
+            animation: changeColor 4s;
+        }
+
+        /* PARA ANIMAR TENGO QUE APLICAR UNA REGLA DE CSS DE KEYFRAMES */
+
+        @keyframes changeColor{
+            /* TODO LO QUE VA ACA DENTRO ES LO QUE VA ANIMAR  */
+
+            0%{
+                background-color: blueviolet;
+            } 
+            /* en el principio, al acercar el mouse cambia el color (se basa en el porcentaje del tiempo) */
+            15%{
+                border-radius: 25%;
+            }
+
+            25%{
+                width: 200px;
+                height: 200px;
+            }
+            50%{
+                background-color: cornflowerblue;
+            }
+
+            100% {
+                background-color: darkgoldenrod;
+            }
+        }

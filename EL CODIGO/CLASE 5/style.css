@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    color: #fff;
+    background-color: #5995DA;
+    padding: 20px 0;
+    /* para activar los poderes de flexbox */
+    display: flex;
+    /* Alineación horizontal */
+    justify-content: center;
+}
+/* Unidades absolutas 
+px
+*/
+
+/* Unidades relativas 
+% 
+*/
+.menu {
+    border: 1px solid #fff;
+    width: 70%;
+    /* justify - space-around - space-between*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.brand-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+}
+
+.brand {
+    width: 70%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    /* Alineación vertical */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+}
+
+.product {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    /* Atenta a que si se desborda el body, acomoda los elementos que sobresalen en la siguiente fila */
+    flex-wrap: wrap;
+
+    /* Cambiar la dirección / row o column 
+    mueve todo el grupo */
+    flex-direction: row;
+}
+
+.first-item {
+    /* Llevar lo mas a la derecha posible al elemento / mueve solo un elemento */
+    order: 1;
+}
+
+.last-item {
+    order: -1;
+}
+
+

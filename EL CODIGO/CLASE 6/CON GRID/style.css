@@ -1,0 +1,37 @@
+.grid-container {
+    display: grid;
+    /*Definimos filas + unidades de medida*/
+    grid-template-rows: 150px 150px 150px 150px;
+    /* Tienen como opción la función Repeat - repeat(3,150px)*/
+    border: 3px solid black;
+
+    /* Exiten una unidad de medida que se llama fr de fraccion 
+    que es la que nos ayuda a que se reparta el espacio relativamente
+    y funcione mejor en responsive */
+
+    /*Definimos columnas + unidades de medida */
+    grid-template-columns: 150px 150px 1fr 1fr;
+
+    /* Especie de margin entre celdas*/
+    grid-gap: 10px;
+}
+
+.grid-item {
+    border: 2px solid black;
+}
+
+.first-item {
+     /* Quiero que empiece y termine en que columna */
+     grid-column: 1 / 3;
+     grid-row: 1 / 3;
+
+     /* Span en cambio le dice que ocupe columns o rows*/
+
+     /* grid-column: 1 / span 3;
+     grid-row: 1 / span 3; */
+}
+
+
+
+
+

@@ -1,0 +1,92 @@
+/* Media query / Consulta de medios CSS */
+
+/* @media tipo de medio and (condición) {
+    escribo css normal 
+} */
+
+body {
+    background-color: #F09A9D;
+}
+
+p {
+    font-size: 22px;
+    color: blue;
+}
+
+/* Mobile */
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: #B2D6F9;
+    }
+
+    .products {
+        border: 1px solid black;
+    }
+
+    #trabajos {
+        text-decoration: none;
+    }
+}
+
+footer {
+    display: none;
+}
+
+
+.magic {
+    color: green;
+}
+
+/* Tablet */
+@media only screen and (min-width: 501px) and (max-width: 980px) {
+    body {
+        background-color: #F5CF8E;
+    }
+}
+
+/* orientación del dispositivo */
+@media only screen and (orientation: landscape) {
+    p {
+        font-size: 44px;
+    }
+}
+
+/* Imprimir */
+@media print {
+    p {
+        color: green;
+    }
+
+    footer {
+        display: block;
+    }
+    
+}
+
+/* Preferencias de usuario */
+/* Disminuye las animaciones del sitio */
+@media (prefers-reduce-motion: reduce) {
+    .animacion {
+        transition: all 4s linear;
+    }
+}
+/* Setea un color de fondo para el body si el sistema está configurado en dark */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+    }
+}
+
+/* Elegir que archivos queremos evitar que se descarguen */
+@media (prefers-reduced-data: reduce) {
+    body {
+        background-color: url('bajacalidad.png');
+    }
+}
+
+
+
+
+
+
+
